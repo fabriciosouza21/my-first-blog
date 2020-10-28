@@ -3,7 +3,16 @@
     <title>Hello blog</title>
 </head>
 <body>
-    <p>hi there!</p>
-    <p>it work!</p>
+    <div>
+        <h1> <a href="/"> Django basico</a> </h1>
+    </div>
+   {% for post in posts %}
+       <div>
+           <h2> <a href="">{{post.title}}</a></h2>
+           <p>{{ post.text | linebreaksbr}}</p>
+           <p>{{post.published_date}}</p>
+       </div>   
+   {% endfor %}
+   
 </body>
 <html>
